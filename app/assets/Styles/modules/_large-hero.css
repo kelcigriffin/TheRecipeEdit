@@ -1,9 +1,14 @@
 .large-hero {
     position: relative;
     size: 100%;
-    background-color: $mainPink;
+    background: $mainGreige;
+    border-bottom: 10px solid $mainDusty;
 
-    
+    &__image {
+        display: block;
+        opacity: .6;
+        
+    }
 
     &__text-content {
             position: absolute;
@@ -12,48 +17,70 @@
             left: 0;
             width: 100%;
             text-align: center;
+
+            @mixin atSmall {
+                transform: translateY(-60%);
+            }
+
+            @mixin atMedium {
+                transform: translateY(-60%);
+            }
+
+            @mixin atLarge {
+                transform: translateY(-60%);
+            }
     }
 
     &__title {
         font-weight: 300;
         font-family: 'Raleway', sans-serif;
-        color: $mainGreen;
-        font-size: 1rem;
+        color: $mainRed;
+        font-size: 2rem;
         margin: 0;
 
         @mixin atSmall {
-            font-size: 2rem;
+            font-size: 4rem;
         }
 
         @mixin atMedium {
-            font-size: 2.5rem;
+            font-size: 4rem;
         }
 
-        @mixin atSmall {
-            font-size: 3rem;
+        @mixin atLarge {
+            font-size: 5rem;
         }
     }
 
     &__subtitle {
         font-weight: 300;
         font-family: 'Raleway', sans-serif;
-        color: $mainGreen;
-        font-size: .75rem;
+        color: $mainRed;
+        font-size: 1rem;
         margin: 0;
         
         @mixin atSmall {
-            font-size: 1.2rem;
+            font-size: 1.8rem;
+        }
+
+        @mixin atMedium {
+            font-size: 2rem;
+        }
+
+        @mixin atLarge {
+            font-size: 2.5rem;
         }
     }
 
     &__description {
-        color: #e9e6e1;;
+        color: $mainDusty;
         font-size: 1rem;
         font-weight: 300;
         text-shadow: 1px 1px 0 rgba(0 , 0, 0, .1);
         max-width: 18.75rem;
         margin-left: auto;
         margin-right: auto;
+
+        
     }
 }
 
